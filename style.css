@@ -7,6 +7,10 @@
     font-family: "Roboto" , sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 li{
     list-style-type: none;
 }
@@ -125,6 +129,23 @@ label{
     font-size: 14px;
     font-weight: bold;
 }
+
+nav,
+.scroll,
+.header{
+    opacity: 1;
+    visibility: visible;
+    transition: all 600ms 800ms;
+}
+
+.modal--open nav,
+.modal--open .scroll,
+.modal--open .header{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 400ms;
+}
+
 
 /* Lanidng Page */
 
@@ -377,10 +398,18 @@ footer{
     width: 90%;
     max-width: 1100px;
     height: 700px;
-    box-shadow: 0 20px 80px 0 rgb( 0, 0, 0, 0.55);
     border-radius: 20px;
     overflow: hidden;
     display: flex;
+    visibility: hidden;
+    z-index: -1;
+    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+}
+
+.modal--open .modal{
+    z-index: 60;
+    box-shadow: 0 20px 80px 0 rgb( 0, 0, 0, 0.55);
+    visibility: visible;
 }
 
 .modal__half{
@@ -390,10 +419,17 @@ footer{
     flex-direction: column;
     justify-content: center;
     position: relative;
+    transition: all 500ms ease-in;
+}
+
+.modal--open .modal__about,
+.modal--open .modal__contact{
+    transform: translateX(0%);
 }
 
 .modal__about {
     background-color: rgb(245, 245, 245);
+    transform: translateX(-110%);
 }
 
 .modal__languages{
@@ -434,6 +470,8 @@ footer{
 .modal__contact{
     background-color: #242424;
     color: white;
+    transform: translateX(110%);
+    transition: all 500ms ease-in;
 }
 
 .modal__title{
@@ -482,7 +520,7 @@ footer{
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: -1;
@@ -504,6 +542,7 @@ footer{
 
 .modal__overlay--visible{
     z-index: 1;
+    display: flex;
 }
 
 .fa-spinner{

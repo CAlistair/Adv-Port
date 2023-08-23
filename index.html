@@ -26,20 +26,20 @@
             </figure>
             <ul class="nav__link--list">
                 <li class="nav__link">
-                    <a href="#" class="
+                    <a href="#header" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black
                     ">About</a>
                 </li>
                 <li class="nav__link">
-                    <a href="#" class="
+                    <a href="#projects" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black
-                    ">Projetcs</a>
+                    ">Projects</a>
                 </li>
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
@@ -78,7 +78,7 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click">
+        <button class="mail__btn click" onclick="toggleModal()">
             <i class="fas fa-envelope"></i>
         </button>
         <a href="#projects" class="scroll">
@@ -109,6 +109,7 @@
                 </div>
             </div>
             <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
                 <h3 class="modal__title .modal__title--contacy">Lets have a chat</h3>
                 <h4 class="modal__sub-title modal__sub-title--contact">
                     I'm currently open to new opportunities
@@ -135,7 +136,6 @@
                     Thanks for the message! Looking forward to speaking to you soon.
                 </div>
             </div>
-            <i class="fas fa-times modal__exit click"></i>
         </div>
     </section>
 
@@ -221,11 +221,11 @@
             link__hover-effect
             link__hover-effect--white
             ">LinkedIn</a>
-                    <a href="" class="
+                    <a href="#" class="
             footer__social--link
             link__hover-effect
             link__hover-effect--white
-            ">Contact</a>
+            " onclick="toggleModal()">Contact</a>
                     <a href="" class="
             footer__social--link
             link__hover-effect
