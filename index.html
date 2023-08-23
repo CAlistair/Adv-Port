@@ -7,6 +7,15 @@
     <title>Alistair Chan</title>
     <link rel="stylesheet" href="style.css ">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("ayk-pGC6LuVij3L8V");
+   })();
+</script>
 </head>
 
 <body>
@@ -104,18 +113,18 @@
                 <h4 class="modal__sub-title modal__sub-title--contact">
                     I'm currently open to new opportunities
                 </h4>
-                <form id="contact__form" action="">
+                <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label">Name</label>
-                        <input class="input" name="user_name" type="text" required></input>
+                        <input class="input" name="user_name" type="text" ></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Email</label>
-                        <input class="input" name="user_email" type="email" required></input>
+                        <input class="input" name="user_email" type="email" ></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Message</label>
-                        <textarea class="input" name="message" type="text" required></textarea>
+                        <textarea class="input" name="message" type="text" ></textarea>
                     </div>
                     <button id="contact__submit" class="form__submit">Send it my way</button>
                 </form>
@@ -199,7 +208,7 @@
         <div class="container">
             <div class="row footer__row">
                 <figure>
-                    <img class="footer__logo-img" src="./assets/logo.svg" alt="">
+                    <h1 class="footer__logo-img"><span class="purple">AC</span></h1>
                 </figure>
                 <div class="footer__social--list">
                     <a href="" class="
