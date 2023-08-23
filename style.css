@@ -269,10 +269,10 @@ nav,
 /* Navigation */ 
 
 #personal-logo{
-    width: 50px;
+    width: auto;
     height: 50px;
-    filter: invert(1);
 }
+
 
 nav{
     display: flex;
