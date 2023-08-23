@@ -30,6 +30,7 @@ button{
 
 section{
     background-color: rgb(245, 245, 245);
+    transition: all 500ms ease;
 }
 
 .container{
@@ -82,13 +83,10 @@ section{
     transition: all 400ms ease;
 }
 
-.link__hover-effect--white:after{
-    background-color: #fff;
+.link__hover-effect:after{
+    background-color: #A441F7;
 }
 
-.link__hover-effect--black:after{
-    background-color: #242424;
-}
 
 .link__hover-effect:hover:after {
     left: 0;
@@ -146,6 +144,35 @@ nav,
     transition: all 400ms;
 }
 
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-adjust,
+.dark-theme .header__para{
+    color: #fff;
+}
+
+.dark-theme section{
+    background-color: #242424;
+}
+
+.dark-theme #personal-logo{
+    filter: none;
+}
+
+.dark-theme .scroll__icon{
+    border-color: #fff;
+}
+
+.dark-theme .scroll__icon:after{
+    background-color: #fff;
+}
+
+.dark-theme .mail__btn{
+    background-color: #fff;
+    color: #242424;
+}
 
 /* Lanidng Page */
 
