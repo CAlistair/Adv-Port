@@ -198,6 +198,10 @@ nav,
     max-width: 450px;
 }
 
+.header__para a{
+    color: #A441F7;
+}
+
 .social__list {
     margin-top: 16px;
     display: flex;
